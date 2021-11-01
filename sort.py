@@ -80,6 +80,3 @@ def getauthors(data,i):
             except KeyError:
                 authors = "none"
     return authors
-
-
-print(sort())
