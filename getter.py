@@ -12,7 +12,7 @@ def getData():
     regex1 = r"[O][L][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][M][/]"
     i = 0
     try:
-        with open('c:/Users/Stan/Desktop/2810/isbn.csv', 'r+') as file:
+        with open('c:/Users/Stan/Documents/Github/ExercicePython3010/isbn.csv', 'r+') as file:
             for ligne in file:
                 temp = {}
 
@@ -34,7 +34,7 @@ def getData():
                     acc["title"] = x
                     temp["OpenLib"] = acc
                 except KeyError:
-                    print("void")
+                    pass
 
                 #GoogleBooks OK
                 query = 'isbn:'+cleaned
@@ -47,11 +47,11 @@ def getData():
                     try: 
                         acc['title'] = x["items"][0]['volumeInfo']["title"]
                     except KeyError:
-                        print('void')
+                        pass
                     try:
                         acc['authors'] = x["items"][0]['volumeInfo']["authors"]
                     except KeyError:
-                        print('void')
+                        pass
                     temp["GoogleBooks"] = acc
                 # #AltMetrics OK
                 url = "https://api.altmetric.com/v1/isbn/"+cleaned
@@ -79,7 +79,7 @@ def getData():
                     temp["BNF"] = acc
                     
                 except AttributeError:
-                    print("void")
+                    pass
 
 
                 finalValues[i] = temp
