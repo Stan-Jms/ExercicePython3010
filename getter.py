@@ -12,7 +12,7 @@ def getData():
     regex1 = r"[O][L][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][M][/]"
     i = 0
     try:
-        with open('c:/Users/Stan/Documents/Github/ExercicePython3010/test.csv', 'r+') as file:
+        with open('c:/Users/Stan/Documents/Github/ExercicePython3010/isbn.csv', 'r+') as file:
             for ligne in file:
                 temp = {}
 

@@ -55,10 +55,12 @@ def sort():
                     elif OL_title != "":
                         TITLE = OL_title
                         AUTHORS = getauthors(data,i)
-                
-                payload[i]["ISBN"] = ISBN
-                payload[i]["title"] = TITLE
-                payload[i]["authors"] = AUTHORS
+                    else:
+                        pass
+                if TITLE != "" and ISBN != "":
+                    payload[i] = {"ISBN" : ISBN, "title" : TITLE, "authors" : AUTHORS}
+                else:
+                    payload[i] = ""
         i+=1
     return payload
 
