@@ -1,6 +1,5 @@
 from os import altsep
 import re
-
 from getter import *
 
 
