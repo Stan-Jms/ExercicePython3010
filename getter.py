@@ -29,8 +29,7 @@ def getData():
                     x = x['ISBN:'+cleaned]['info_url'].replace("https://openlibrary.org/books/","")
                     x = re.sub(regex,'',x)
                     x = re.sub(regex1,'',x)
-                    x = x.replace("_"," ")
-                    x = x.replace(".","")
+                    x = x.replace("_"," ").replace(".","")
                     acc["title"] = x
                     temp["OpenLib"] = acc
                 except KeyError:

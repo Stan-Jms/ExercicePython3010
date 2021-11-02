@@ -57,7 +57,7 @@ def sort():
                     else:
                         pass
                 if TITLE != "" and ISBN != "":
-                    payload[i] = {"ISBN" : ISBN, "title" : TITLE, "authors" : AUTHORS}
+                    payload[i] = ((ISBN,TITLE),(ISBN,AUTHORS[0]))
                 else:
                     payload[i] = ""
         i+=1
